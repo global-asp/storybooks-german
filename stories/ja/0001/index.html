@@ -12,7 +12,7 @@
 	<link rel="shortcut icon" href="/storybooks-german/favicon.ico?v=4">
 	<meta name="msapplication-TileColor" content="#00aba9">
 	<meta name="theme-color" content="#ffffff">
-	<title>とても背が高い男がいた - Geschichten auf deutsch</title>
+	<title>とても背の高い男がいた - Geschichten auf deutsch</title>
 	<meta name="description" content="Geschichten auf deutsch ist eine kostenlose, Open Access Bildungsressource, die Alphabetisierung und Sprachunterricht Zuhause, in der Schule und Bevölkerung/Gemeinschaft fördert. Es stellt 40 Geschichten aus dem afrikanischen Geschichtenbuch mit Text und Audio in Deutsch und den meistgesprochenen Einwanderer- und Flüchtlingssprachen Deutschlands zur Verfügung.
 ">
 	<link rel="stylesheet" href="/storybooks-german/css/spectre.min.css">
@@ -79,21 +79,24 @@
 <div class="columns" id="text01">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0001/01.jpg"></div>
 	<div class=" column col-7 col-lg-12 col-md-12 col-sm-12">
-		<h1><span class="def">とても背が高い男がいた</span>
+		<h1><span class="def">とても背の高い男がいた</span>
 			<span class="l1">Ein sehr großer Mann</span>
 		</h1>
 		<div class="btn-group cover-buttons">
 			<a href="#text02" class="btn btn-lg" title="Nächste Seite"><i class="icon-arrow-down"></i></a>
-			<button class="btn btn-lg disabled" id="playbutton01" onclick="playpause('01')" title="Wiedergabe/Pause"><i class="icon-volume-up"></i></button>
+			<button class="btn btn-lg" id="playbutton01" onclick="playpause('01')" title="Wiedergabe/Pause"><i class="icon-volume-up"></i></button>
+			<audio id="audio01" onended="resetbutton('01')" src="https://globalstorybooks.net/media/audio/ja/0001/mp3/01.mp3"></audio>
 			<button onclick="switchlang('ja,de','de,ja')" class="btn btn-lg lang-primary" title="Zwischen Japanese und Deutsch wechseln">de</button>
 		</div>
 		<h3><span class="tooltip tooltip-right" data-tooltip="Geschrieben von"><img class="cover-icon cover-icon-text" src="/storybooks-german/css/pencil.svg" alt="Geschrieben von"></span> Cornelius Gulere</h3>
 		<h3><span class="tooltip tooltip-right" data-tooltip="Illustriert von"><img class="cover-icon cover-icon-text" src="/storybooks-german/css/art.svg" alt="Illustriert von"></span> Catherine Groenewald</h3>
 		<h3><span class="tooltip tooltip-right" data-tooltip="Übersetzt von"><img class="cover-icon cover-icon-text" src="/storybooks-german/css/global.svg" alt="Übersetzt von"></span> Tomoyo Okuda</h3>
+		<h3><span class="tooltip tooltip-right" data-tooltip="Gelesen von"><img class="cover-icon cover-icon-text" src="/storybooks-german/css/megaphone.svg" alt="Gelesen von"></span> Yumi Okano</h3>
 		<h3><span class="tooltip tooltip-right" data-tooltip="Sprache"><img class="cover-icon cover-icon-text" src="/storybooks-german/css/language.svg" alt="Sprache"></span> <a href="/storybooks-german/stories/ja">Japanese</a></h3>
 		<h3><span class="tooltip tooltip-right" data-tooltip="Niveau"><img class="cover-icon cover-icon-text" src="/storybooks-german/css/level.svg" alt="Niveau"></span> <a href="/storybooks-german/stories/ja/level2">Niveau 2</a></h3>
-		<h3><span class="tooltip tooltip-right" data-tooltip="Vollständige Geschichte erzählen"><img class="cover-icon cover-icon-text" src="/storybooks-german/css/speaker.svg" alt="Vollständige Geschichte erzählen"></span> <span class="cover_msg">Zu dieser Geschichte ist noch kein Audio verfügbar.</span></h3>
-
+		<h3><span class="tooltip tooltip-right" data-tooltip="Vollständige Geschichte erzählen"><img class="cover-icon cover-icon-audio" src="/storybooks-german/css/speaker.svg" alt="Vollständige Geschichte erzählen"></span> <audio id="audioplayer" controls><source src="https://globalstorybooks.net/media/audio/ja/0001/ja-0001_tall.mp3" type="audio/mpeg"></audio></h3>
+		<h3><span class="tooltip tooltip-right" data-tooltip="Lesegeschwindigkeit"><img class="cover-icon cover-icon-text" src="/storybooks-german/css/speedometer.svg" alt="Lesegeschwindigkeit" style="cursor:pointer" onclick="normalspeed()"></span> <span id="slider_tooltip" class="tooltip" data-tooltip="Lesegeschwindigkeit: 1×"><input type="range" min="0.5" max="1.5" value="1" step="0.05" id="audio_slider" class="slider" oninput="adjustslider()"></span></h3>
+		<h3><span class="tooltip tooltip-right" data-tooltip="Autoplay Geschichte (Beta)"><img id="autoplay_icon" class="cover-icon cover-icon-text" src="/storybooks-german/css/play.svg" alt="Autoplay Geschichte" style="cursor:pointer" onclick="autoplay()"></span></h3>
 	</div>
 </div>
 
@@ -102,7 +105,7 @@
         <div id="text02" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0001/02.jpg"></div>
 	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level2-txt def"><h3>
-	かれのくわは短すぎた
+	かれのくわは短すぎた。
 	</h3></div>
 
 	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level2-txt l1"><h3>
@@ -113,7 +116,8 @@
 	<div class="btn-group switcher-group">
 		<a href="#text01" class="btn btn-lg" title="Vorherige Seite"><i class="icon-arrow-up"></i></a>
 		<a href="#text03" class="btn btn-lg" title="Nächste Seite"><i class="icon-arrow-down"></i></a>
-		<button class="btn btn-lg disabled" id="playbutton02" onclick="playpause('02')" title="Wiedergabe/Pause"><i class="icon-volume-up"></i></button>
+		<audio id="audio02" onended="resetbutton('02')" src="https://globalstorybooks.net/media/audio/ja/0001/mp3/02.mp3"></audio>
+		<button class="btn btn-lg" id="playbutton02" onclick="playpause('02')" title="Wiedergabe/Pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('ja,de','de,ja')" class="btn btn-lg lang-primary" title="Zwischen Japanese und Deutsch wechseln">de</button>
@@ -126,7 +130,7 @@
 <div id="text03" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0001/03.jpg"></div>
 	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level2-txt def"><h3>
-	かれのドアは低すぎた
+	かれの戸口は低すぎた。
 	</h3></div>
 
 	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level2-txt l1"><h3>
@@ -137,7 +141,8 @@
 	<div class="btn-group switcher-group">
 		<a href="#text02" class="btn btn-lg" title="Vorherige Seite"><i class="icon-arrow-up"></i></a>
 		<a href="#text04" class="btn btn-lg" title="Nächste Seite"><i class="icon-arrow-down"></i></a>
-		<button class="btn btn-lg disabled" id="playbutton03" onclick="playpause('03')" title="Wiedergabe/Pause"><i class="icon-volume-up"></i></button>
+		<audio id="audio03" onended="resetbutton('03')" src="https://globalstorybooks.net/media/audio/ja/0001/mp3/03.mp3"></audio>
+		<button class="btn btn-lg" id="playbutton03" onclick="playpause('03')" title="Wiedergabe/Pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('ja,de','de,ja')" class="btn btn-lg lang-primary" title="Zwischen Japanese und Deutsch wechseln">de</button>
@@ -150,7 +155,7 @@
 <div id="text04" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0001/04.jpg"></div>
 	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level2-txt def"><h3>
-	かれのベッドは短すぎた
+	かれのベッドは短すぎた。
 	</h3></div>
 
 	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level2-txt l1"><h3>
@@ -161,7 +166,8 @@
 	<div class="btn-group switcher-group">
 		<a href="#text03" class="btn btn-lg" title="Vorherige Seite"><i class="icon-arrow-up"></i></a>
 		<a href="#text05" class="btn btn-lg" title="Nächste Seite"><i class="icon-arrow-down"></i></a>
-		<button class="btn btn-lg disabled" id="playbutton04" onclick="playpause('04')" title="Wiedergabe/Pause"><i class="icon-volume-up"></i></button>
+		<audio id="audio04" onended="resetbutton('04')" src="https://globalstorybooks.net/media/audio/ja/0001/mp3/04.mp3"></audio>
+		<button class="btn btn-lg" id="playbutton04" onclick="playpause('04')" title="Wiedergabe/Pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('ja,de','de,ja')" class="btn btn-lg lang-primary" title="Zwischen Japanese und Deutsch wechseln">de</button>
@@ -174,7 +180,7 @@
 <div id="text05" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0001/05.jpg"></div>
 	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level2-txt def"><h3>
-	かれの自転車は低すぎた
+	かれの自転車は低すぎた。
 	</h3></div>
 
 	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level2-txt l1"><h3>
@@ -185,7 +191,8 @@
 	<div class="btn-group switcher-group">
 		<a href="#text04" class="btn btn-lg" title="Vorherige Seite"><i class="icon-arrow-up"></i></a>
 		<a href="#text06" class="btn btn-lg" title="Nächste Seite"><i class="icon-arrow-down"></i></a>
-		<button class="btn btn-lg disabled" id="playbutton05" onclick="playpause('05')" title="Wiedergabe/Pause"><i class="icon-volume-up"></i></button>
+		<audio id="audio05" onended="resetbutton('05')" src="https://globalstorybooks.net/media/audio/ja/0001/mp3/05.mp3"></audio>
+		<button class="btn btn-lg" id="playbutton05" onclick="playpause('05')" title="Wiedergabe/Pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('ja,de','de,ja')" class="btn btn-lg lang-primary" title="Zwischen Japanese und Deutsch wechseln">de</button>
@@ -209,7 +216,8 @@
 	<div class="btn-group switcher-group">
 		<a href="#text05" class="btn btn-lg" title="Vorherige Seite"><i class="icon-arrow-up"></i></a>
 		<a href="#text07" class="btn btn-lg" title="Nächste Seite"><i class="icon-arrow-down"></i></a>
-		<button class="btn btn-lg disabled" id="playbutton06" onclick="playpause('06')" title="Wiedergabe/Pause"><i class="icon-volume-up"></i></button>
+		<audio id="audio06" onended="resetbutton('06')" src="https://globalstorybooks.net/media/audio/ja/0001/mp3/06.mp3"></audio>
+		<button class="btn btn-lg" id="playbutton06" onclick="playpause('06')" title="Wiedergabe/Pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('ja,de','de,ja')" class="btn btn-lg lang-primary" title="Zwischen Japanese und Deutsch wechseln">de</button>
@@ -222,7 +230,7 @@
 <div id="text07" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0001/07.jpg"></div>
 	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level2-txt def"><h3>
-	だからかれはとっての長いくわを作った
+	だからかれはとっての長いくわを作った。
 	</h3></div>
 
 	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level2-txt l1"><h3>
@@ -233,7 +241,8 @@
 	<div class="btn-group switcher-group">
 		<a href="#text06" class="btn btn-lg" title="Vorherige Seite"><i class="icon-arrow-up"></i></a>
 		<a href="#text08" class="btn btn-lg" title="Nächste Seite"><i class="icon-arrow-down"></i></a>
-		<button class="btn btn-lg disabled" id="playbutton07" onclick="playpause('07')" title="Wiedergabe/Pause"><i class="icon-volume-up"></i></button>
+		<audio id="audio07" onended="resetbutton('07')" src="https://globalstorybooks.net/media/audio/ja/0001/mp3/07.mp3"></audio>
+		<button class="btn btn-lg" id="playbutton07" onclick="playpause('07')" title="Wiedergabe/Pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('ja,de','de,ja')" class="btn btn-lg lang-primary" title="Zwischen Japanese und Deutsch wechseln">de</button>
@@ -246,7 +255,7 @@
 <div id="text08" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0001/08.jpg"></div>
 	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level2-txt def"><h3>
-	かれはとても高いドアのフレームを作った
+	かれはとても高いドアのフレームを作った。
 	</h3></div>
 
 	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level2-txt l1"><h3>
@@ -257,7 +266,8 @@
 	<div class="btn-group switcher-group">
 		<a href="#text07" class="btn btn-lg" title="Vorherige Seite"><i class="icon-arrow-up"></i></a>
 		<a href="#text09" class="btn btn-lg" title="Nächste Seite"><i class="icon-arrow-down"></i></a>
-		<button class="btn btn-lg disabled" id="playbutton08" onclick="playpause('08')" title="Wiedergabe/Pause"><i class="icon-volume-up"></i></button>
+		<audio id="audio08" onended="resetbutton('08')" src="https://globalstorybooks.net/media/audio/ja/0001/mp3/08.mp3"></audio>
+		<button class="btn btn-lg" id="playbutton08" onclick="playpause('08')" title="Wiedergabe/Pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('ja,de','de,ja')" class="btn btn-lg lang-primary" title="Zwischen Japanese und Deutsch wechseln">de</button>
@@ -270,7 +280,7 @@
 <div id="text09" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0001/09.jpg"></div>
 	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level2-txt def"><h3>
-	かれはとても長いベッドを作った
+	かれはとても長いベッドを作った。
 	</h3></div>
 
 	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level2-txt l1"><h3>
@@ -281,7 +291,8 @@
 	<div class="btn-group switcher-group">
 		<a href="#text08" class="btn btn-lg" title="Vorherige Seite"><i class="icon-arrow-up"></i></a>
 		<a href="#text10" class="btn btn-lg" title="Nächste Seite"><i class="icon-arrow-down"></i></a>
-		<button class="btn btn-lg disabled" id="playbutton09" onclick="playpause('09')" title="Wiedergabe/Pause"><i class="icon-volume-up"></i></button>
+		<audio id="audio09" onended="resetbutton('09')" src="https://globalstorybooks.net/media/audio/ja/0001/mp3/09.mp3"></audio>
+		<button class="btn btn-lg" id="playbutton09" onclick="playpause('09')" title="Wiedergabe/Pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('ja,de','de,ja')" class="btn btn-lg lang-primary" title="Zwischen Japanese und Deutsch wechseln">de</button>
@@ -294,7 +305,7 @@
 <div id="text10" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0001/10.jpg"></div>
 	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level2-txt def"><h3>
-	かれはとても背の高い自転車を買った
+	かれはとても背の高い自転車を買った。
 	</h3></div>
 
 	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level2-txt l1"><h3>
@@ -305,7 +316,8 @@
 	<div class="btn-group switcher-group">
 		<a href="#text09" class="btn btn-lg" title="Vorherige Seite"><i class="icon-arrow-up"></i></a>
 		<a href="#text11" class="btn btn-lg" title="Nächste Seite"><i class="icon-arrow-down"></i></a>
-		<button class="btn btn-lg disabled" id="playbutton10" onclick="playpause('10')" title="Wiedergabe/Pause"><i class="icon-volume-up"></i></button>
+		<audio id="audio10" onended="resetbutton('10')" src="https://globalstorybooks.net/media/audio/ja/0001/mp3/10.mp3"></audio>
+		<button class="btn btn-lg" id="playbutton10" onclick="playpause('10')" title="Wiedergabe/Pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('ja,de','de,ja')" class="btn btn-lg lang-primary" title="Zwischen Japanese und Deutsch wechseln">de</button>
@@ -318,7 +330,7 @@
 <div id="text11" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0001/11.jpg"></div>
 	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level2-txt def"><h3>
-	かれはとても高い椅子に座った。かれはとても長いフォークで食べた
+	かれはとても高い椅子に座った。かれはとても長いフォークで食べた。
 	</h3></div>
 
 	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level2-txt l1"><h3>
@@ -329,7 +341,8 @@
 	<div class="btn-group switcher-group">
 		<a href="#text10" class="btn btn-lg" title="Vorherige Seite"><i class="icon-arrow-up"></i></a>
 		<a href="#text12" class="btn btn-lg" title="Nächste Seite"><i class="icon-arrow-down"></i></a>
-		<button class="btn btn-lg disabled" id="playbutton11" onclick="playpause('11')" title="Wiedergabe/Pause"><i class="icon-volume-up"></i></button>
+		<audio id="audio11" onended="resetbutton('11')" src="https://globalstorybooks.net/media/audio/ja/0001/mp3/11.mp3"></audio>
+		<button class="btn btn-lg" id="playbutton11" onclick="playpause('11')" title="Wiedergabe/Pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('ja,de','de,ja')" class="btn btn-lg lang-primary" title="Zwischen Japanese und Deutsch wechseln">de</button>
@@ -342,7 +355,7 @@
 <div id="text12" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0001/12.jpg"></div>
 	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level2-txt def"><h3>
-	かれは自分の家を出て広い森に住んだ。そしてそこに何年も住んだ
+	かれは自分の家を出て広い森に住んだ。そしてそこに何年も住んだ。
 	</h3></div>
 
 	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level2-txt l1"><h3>
@@ -353,7 +366,8 @@
 	<div class="btn-group switcher-group">
 		<a href="#text11" class="btn btn-lg" title="Vorherige Seite"><i class="icon-arrow-up"></i></a>
 		<a href="#colophon" class="btn btn-lg" title="Nachspann"><i class="icon-arrow-down"></i></a>
-		<button class="btn btn-lg disabled" id="playbutton12" onclick="playpause('12')" title="Wiedergabe/Pause"><i class="icon-volume-up"></i></button>
+		<audio id="audio12" onended="resetbutton('12')" src="https://globalstorybooks.net/media/audio/ja/0001/mp3/12.mp3"></audio>
+		<button class="btn btn-lg" id="playbutton12" onclick="playpause('12')" title="Wiedergabe/Pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('ja,de','de,ja')" class="btn btn-lg lang-primary" title="Zwischen Japanese und Deutsch wechseln">de</button>
@@ -369,6 +383,7 @@
 		<h5><span class="colophon-heading">Geschrieben von:</span> Cornelius Gulere</h5>
 		<h5><span class="colophon-heading">Illustriert von:</span> Catherine Groenewald</h5>
 		<h5><span class="colophon-heading">Übersetzt von:</span> Tomoyo Okuda</h5>
+		<h5><span class="colophon-heading">Gelesen von:</span> Yumi Okano</h5>
 		<h5><span class="colophon-heading">Sprache:</span> <a href="/storybooks-german/stories/ja">Japanese</a></h5>
 		<h5><span class="colophon-heading">Niveau:</span> <a href="/storybooks-german/stories/ja/level2">Niveau 2</a></h5>
 		<h5><span class="colophon-heading">Quelle:</span> <a href="https://africanstorybook.org/reader.php?id=918" target="_blank">A very tall man</a> aus <a href="https://africanstorybook.org/">African Storybook</a></h5>
@@ -387,7 +402,7 @@
 			<label class="chip"><a href="/storybooks-german/stories/ja/0210/">ティンギと牛たち</a></label>
 			<label class="chip"><a href="/storybooks-german/stories/ja/0342/">お仕置き</a></label>
 			<label class="chip"><a href="/storybooks-german/stories/ja/0004/">ヤギと犬と牛</a></label>
-			<label class="chip"><a href="/storybooks-german/stories/ja/0234/">アンディスワはサッカースター</a></label>
+			<label class="chip"><a href="/storybooks-german/stories/ja/0234/">サッカースターのアンディスワ</a></label>
 	</div>
 </div>
 <div>
