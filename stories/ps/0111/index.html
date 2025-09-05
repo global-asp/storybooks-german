@@ -12,7 +12,7 @@
 	<link rel="shortcut icon" href="/storybooks-german/favicon.ico?v=4">
 	<meta name="msapplication-TileColor" content="#00aba9">
 	<meta name="theme-color" content="#ffffff">
-	<title>ولې هېپو ویښتان نه لري - Geschichten auf deutsch</title>
+	<title>ولې هېپو یا سمندري اس ویښتان نه لري؟ - Geschichten auf deutsch</title>
 	<meta name="description" content="Geschichten auf deutsch ist eine kostenlose, Open Access Bildungsressource, die Alphabetisierung und Sprachunterricht Zuhause, in der Schule und Bevölkerung/Gemeinschaft fördert. Es stellt 40 Geschichten aus dem afrikanischen Geschichtenbuch mit Text und Audio in Deutsch und den meistgesprochenen Einwanderer- und Flüchtlingssprachen Deutschlands zur Verfügung.
 ">
 	<link rel="stylesheet" href="/storybooks-german/css/spectre.min.css">
@@ -80,21 +80,24 @@
 <div class="columns" id="text01">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0111/01.jpg"></div>
 	<div class=" column col-7 col-lg-12 col-md-12 col-sm-12">
-		<h1 dir="rtl"><span class="def">ولې هېپو ویښتان نه لري</span>
+		<h1 dir="rtl"><span class="def">ولې هېپو یا سمندري اس ویښتان نه لري؟</span>
 			<span dir="ltr" class="l1">Warum Flußpferde keine Haare haben</span>
 		</h1>
 		<div class="btn-group cover-buttons">
 			<a href="#text02" class="btn btn-lg" title="Nächste Seite"><i class="icon-arrow-down"></i></a>
-			<button class="btn btn-lg disabled" id="playbutton01" onclick="playpause('01')" title="Wiedergabe/Pause"><i class="icon-volume-up"></i></button>
+			<button class="btn btn-lg" id="playbutton01" onclick="playpause('01')" title="Wiedergabe/Pause"><i class="icon-volume-up"></i></button>
+			<audio id="audio01" onended="resetbutton('01')" src="https://globalstorybooks.net/media/audio/ps/0111/mp3/01.mp3"></audio>
 			<button onclick="switchlang('ps,de','de,ps')" class="btn btn-lg lang-primary" title="Zwischen Pashto und Deutsch wechseln">de</button>
 		</div>
 		<h3><span class="tooltip tooltip-right" data-tooltip="Geschrieben von"><img class="cover-icon cover-icon-text" src="/storybooks-german/css/pencil.svg" alt="Geschrieben von"></span> Basilio Gimo, David Ker</h3>
 		<h3><span class="tooltip tooltip-right" data-tooltip="Illustriert von"><img class="cover-icon cover-icon-text" src="/storybooks-german/css/art.svg" alt="Illustriert von"></span> Carol Liddiment</h3>
 		<h3><span class="tooltip tooltip-right" data-tooltip="Übersetzt von"><img class="cover-icon cover-icon-text" src="/storybooks-german/css/global.svg" alt="Übersetzt von"></span> Darakhte Danesh</h3>
+		<h3><span class="tooltip tooltip-right" data-tooltip="Gelesen von"><img class="cover-icon cover-icon-text" src="/storybooks-german/css/megaphone.svg" alt="Gelesen von"></span> Abdul Rafi Mohammadi</h3>
 		<h3><span class="tooltip tooltip-right" data-tooltip="Sprache"><img class="cover-icon cover-icon-text" src="/storybooks-german/css/language.svg" alt="Sprache"></span> <a href="/storybooks-german/stories/ps">Pashto</a></h3>
 		<h3><span class="tooltip tooltip-right" data-tooltip="Niveau"><img class="cover-icon cover-icon-text" src="/storybooks-german/css/level.svg" alt="Niveau"></span> <a href="/storybooks-german/stories/ps/level2">Niveau 2</a></h3>
-		<h3><span class="tooltip tooltip-right" data-tooltip="Vollständige Geschichte erzählen"><img class="cover-icon cover-icon-text" src="/storybooks-german/css/speaker.svg" alt="Vollständige Geschichte erzählen"></span> <span class="cover_msg">Zu dieser Geschichte ist noch kein Audio verfügbar.</span></h3>
-
+		<h3><span class="tooltip tooltip-right" data-tooltip="Vollständige Geschichte erzählen"><img class="cover-icon cover-icon-audio" src="/storybooks-german/css/speaker.svg" alt="Vollständige Geschichte erzählen"></span> <audio id="audioplayer" controls><source src="https://globalstorybooks.net/media/audio/ps/0111/ps-0111_hippos.mp3" type="audio/mpeg"></audio></h3>
+		<h3><span class="tooltip tooltip-right" data-tooltip="Lesegeschwindigkeit"><img class="cover-icon cover-icon-text" src="/storybooks-german/css/speedometer.svg" alt="Lesegeschwindigkeit" style="cursor:pointer" onclick="normalspeed()"></span> <span id="slider_tooltip" class="tooltip" data-tooltip="Lesegeschwindigkeit: 1×"><input type="range" min="0.5" max="1.5" value="1" step="0.05" id="audio_slider" class="slider" oninput="adjustslider()"></span></h3>
+		<h3><span class="tooltip tooltip-right" data-tooltip="Autoplay Geschichte (Beta)"><img id="autoplay_icon" class="cover-icon cover-icon-text" src="/storybooks-german/css/play.svg" alt="Autoplay Geschichte" style="cursor:pointer" onclick="autoplay()"></span></h3>
 	</div>
 </div>
 
@@ -103,7 +106,7 @@
         <div id="text02" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0111/02.jpg"></div>
 	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level2-txt def"><h3 dir="rtl">
-	.یوه ورځ، سويي د سیند په غاړه منډې وهلې.
+	یوه ورځ، سويي د سیند په غاړه منډې وهلې.
 	</h3></div>
 
 	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level2-txt l1"><h3>
@@ -114,7 +117,8 @@
 	<div class="btn-group switcher-group">
 		<a href="#text01" class="btn btn-lg" title="Vorherige Seite"><i class="icon-arrow-up"></i></a>
 		<a href="#text03" class="btn btn-lg" title="Nächste Seite"><i class="icon-arrow-down"></i></a>
-		<button class="btn btn-lg disabled" id="playbutton02" onclick="playpause('02')" title="Wiedergabe/Pause"><i class="icon-volume-up"></i></button>
+		<audio id="audio02" onended="resetbutton('02')" src="https://globalstorybooks.net/media/audio/ps/0111/mp3/02.mp3"></audio>
+		<button class="btn btn-lg" id="playbutton02" onclick="playpause('02')" title="Wiedergabe/Pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('ps,de','de,ps')" class="btn btn-lg lang-primary" title="Zwischen Pashto und Deutsch wechseln">de</button>
@@ -127,8 +131,7 @@
 <div id="text03" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0111/03.jpg"></div>
 	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level2-txt def"><h3 dir="rtl">
-	
-هیپو هم هلته ګرځيده او شنه کبله (واښه) ېې خوړل.
+	هیپو هم هلته ګرځيده او شنه واښه ېې خوړل.
 	</h3></div>
 
 	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level2-txt l1"><h3>
@@ -139,7 +142,8 @@
 	<div class="btn-group switcher-group">
 		<a href="#text02" class="btn btn-lg" title="Vorherige Seite"><i class="icon-arrow-up"></i></a>
 		<a href="#text04" class="btn btn-lg" title="Nächste Seite"><i class="icon-arrow-down"></i></a>
-		<button class="btn btn-lg disabled" id="playbutton03" onclick="playpause('03')" title="Wiedergabe/Pause"><i class="icon-volume-up"></i></button>
+		<audio id="audio03" onended="resetbutton('03')" src="https://globalstorybooks.net/media/audio/ps/0111/mp3/03.mp3"></audio>
+		<button class="btn btn-lg" id="playbutton03" onclick="playpause('03')" title="Wiedergabe/Pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('ps,de','de,ps')" class="btn btn-lg lang-primary" title="Zwischen Pashto und Deutsch wechseln">de</button>
@@ -152,8 +156,7 @@
 <div id="text04" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0111/04.jpg"></div>
 	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level2-txt def"><h3 dir="rtl">
-	
-د هیپو پام نه و شوی، چې سویه هم دلته ده، په تیروتنې سره د سويي پر پښه وختله، سويی چغې کړې “ړنده ېې زما پر پښې وختلې!!”
+	د هیپو پام نه و شوی، چې سویه هم دلته ده، په تیروتنې سره د سويي پر پښه وختله، سويی چغې کړې “ړنده ېې زما پر پښې وختلې!”
 	</h3></div>
 
 	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level2-txt l1"><h3>
@@ -164,7 +167,8 @@
 	<div class="btn-group switcher-group">
 		<a href="#text03" class="btn btn-lg" title="Vorherige Seite"><i class="icon-arrow-up"></i></a>
 		<a href="#text05" class="btn btn-lg" title="Nächste Seite"><i class="icon-arrow-down"></i></a>
-		<button class="btn btn-lg disabled" id="playbutton04" onclick="playpause('04')" title="Wiedergabe/Pause"><i class="icon-volume-up"></i></button>
+		<audio id="audio04" onended="resetbutton('04')" src="https://globalstorybooks.net/media/audio/ps/0111/mp3/04.mp3"></audio>
+		<button class="btn btn-lg" id="playbutton04" onclick="playpause('04')" title="Wiedergabe/Pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('ps,de','de,ps')" class="btn btn-lg lang-primary" title="Zwischen Pashto und Deutsch wechseln">de</button>
@@ -177,8 +181,7 @@
 <div id="text05" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0111/05.jpg"></div>
 	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level2-txt def"><h3 dir="rtl">
-	.
-هیپو له سويي بخښنه وغوښته، خو سويي د هيپو غږ وانه ورېده او په چغو ېې وویل، “یوه ورخ به خامخا خپل غچ درنه اخلم او د دې کار حسابي به دې ورکوې.”
+	هیپو له سويي بخښنه وغوښته، خو سويي د هيپو غږ وانه ورېده او په چغو ېې وویل، “یوه ورخ به خامخا خپل غچ درنه اخلم او د دې کار حسابي به دې ورکوې.”
 	</h3></div>
 
 	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level2-txt l1"><h3>
@@ -189,7 +192,8 @@
 	<div class="btn-group switcher-group">
 		<a href="#text04" class="btn btn-lg" title="Vorherige Seite"><i class="icon-arrow-up"></i></a>
 		<a href="#text06" class="btn btn-lg" title="Nächste Seite"><i class="icon-arrow-down"></i></a>
-		<button class="btn btn-lg disabled" id="playbutton05" onclick="playpause('05')" title="Wiedergabe/Pause"><i class="icon-volume-up"></i></button>
+		<audio id="audio05" onended="resetbutton('05')" src="https://globalstorybooks.net/media/audio/ps/0111/mp3/05.mp3"></audio>
+		<button class="btn btn-lg" id="playbutton05" onclick="playpause('05')" title="Wiedergabe/Pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('ps,de','de,ps')" class="btn btn-lg lang-primary" title="Zwischen Pashto und Deutsch wechseln">de</button>
@@ -202,8 +206,7 @@
 <div id="text06" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0111/06.jpg"></div>
 	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level2-txt def"><h3 dir="rtl">
-	
-سویه د خپل غچ اخیستو لپاره لاړه اور ته ېې وویل، “ورشه کله چې هیپو له اوبو راووتله ويي سوځوه، ځکه چې زما پر پښې ختلې ده،” اور ورته یې وویل، “سمه ده زما ګرانې ملګرې، څه چې ته راته وايې همداسې کوم.”
+	سویه د خپل غچ اخیستو لپاره لاړه اور ته ېې وویل، “ورشه کله چې هیپو له اوبو راووتله ويي سوځوه، ځکه چې زما پر پښې ختلې ده،” اور ورته یې وویل، “سمه ده زما ګرانې ملګرې، څه چې ته راته وايې همداسې کوم.”
 	</h3></div>
 
 	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level2-txt l1"><h3>
@@ -214,7 +217,8 @@
 	<div class="btn-group switcher-group">
 		<a href="#text05" class="btn btn-lg" title="Vorherige Seite"><i class="icon-arrow-up"></i></a>
 		<a href="#text07" class="btn btn-lg" title="Nächste Seite"><i class="icon-arrow-down"></i></a>
-		<button class="btn btn-lg disabled" id="playbutton06" onclick="playpause('06')" title="Wiedergabe/Pause"><i class="icon-volume-up"></i></button>
+		<audio id="audio06" onended="resetbutton('06')" src="https://globalstorybooks.net/media/audio/ps/0111/mp3/06.mp3"></audio>
+		<button class="btn btn-lg" id="playbutton06" onclick="playpause('06')" title="Wiedergabe/Pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('ps,de','de,ps')" class="btn btn-lg lang-primary" title="Zwischen Pashto und Deutsch wechseln">de</button>
@@ -227,7 +231,7 @@
 <div id="text07" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0111/07.jpg"></div>
 	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level2-txt def"><h3 dir="rtl">
-	کله چې هیپو له اوبو څخه را ووتله، اور ورمنډه کړه او هیپو ېې وسوزوله، هیپو چغې کړې “وایییییی!!” او د هیپو ويښتان د اور خوراک شول.
+	کله چې هیپو له اوبو څخه را ووتله، اور ورمنډه کړه او هیپو ېې وسوزوله، هیپو چغې کړې “اخخخخخ!” او د هیپو ويښتان د اور خوراک شول.
 	</h3></div>
 
 	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level2-txt l1"><h3>
@@ -238,7 +242,8 @@
 	<div class="btn-group switcher-group">
 		<a href="#text06" class="btn btn-lg" title="Vorherige Seite"><i class="icon-arrow-up"></i></a>
 		<a href="#text08" class="btn btn-lg" title="Nächste Seite"><i class="icon-arrow-down"></i></a>
-		<button class="btn btn-lg disabled" id="playbutton07" onclick="playpause('07')" title="Wiedergabe/Pause"><i class="icon-volume-up"></i></button>
+		<audio id="audio07" onended="resetbutton('07')" src="https://globalstorybooks.net/media/audio/ps/0111/mp3/07.mp3"></audio>
+		<button class="btn btn-lg" id="playbutton07" onclick="playpause('07')" title="Wiedergabe/Pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('ps,de','de,ps')" class="btn btn-lg lang-primary" title="Zwischen Pashto und Deutsch wechseln">de</button>
@@ -251,8 +256,7 @@
 <div id="text08" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0111/08.jpg"></div>
 	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level2-txt def"><h3 dir="rtl">
-	
-هیپو ژړل او د اوبو خواته ېې منډه کړه، د هغې ټول ویښتان سوزیدلې وو، او په ژړغوني غږ ېې وویل، “زما ښکلي ويښتان وو، زما ټول ويښتان توى شوې!!”
+	هیپو ژړل او د اوبو خواته ېې منډه کړه، د هغې ټول ویښتان سوزیدلې وو، او په ژړغوني غږ ېې وویل، “زما ښکلي ويښتان وو، زما ټول ويښتان توى شوې.”
 	</h3></div>
 
 	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level2-txt l1"><h3>
@@ -263,7 +267,8 @@
 	<div class="btn-group switcher-group">
 		<a href="#text07" class="btn btn-lg" title="Vorherige Seite"><i class="icon-arrow-up"></i></a>
 		<a href="#text09" class="btn btn-lg" title="Nächste Seite"><i class="icon-arrow-down"></i></a>
-		<button class="btn btn-lg disabled" id="playbutton08" onclick="playpause('08')" title="Wiedergabe/Pause"><i class="icon-volume-up"></i></button>
+		<audio id="audio08" onended="resetbutton('08')" src="https://globalstorybooks.net/media/audio/ps/0111/mp3/08.mp3"></audio>
+		<button class="btn btn-lg" id="playbutton08" onclick="playpause('08')" title="Wiedergabe/Pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('ps,de','de,ps')" class="btn btn-lg lang-primary" title="Zwischen Pashto und Deutsch wechseln">de</button>
@@ -287,7 +292,8 @@
 	<div class="btn-group switcher-group">
 		<a href="#text08" class="btn btn-lg" title="Vorherige Seite"><i class="icon-arrow-up"></i></a>
 		<a href="#colophon" class="btn btn-lg" title="Nachspann"><i class="icon-arrow-down"></i></a>
-		<button class="btn btn-lg disabled" id="playbutton09" onclick="playpause('09')" title="Wiedergabe/Pause"><i class="icon-volume-up"></i></button>
+		<audio id="audio09" onended="resetbutton('09')" src="https://globalstorybooks.net/media/audio/ps/0111/mp3/09.mp3"></audio>
+		<button class="btn btn-lg" id="playbutton09" onclick="playpause('09')" title="Wiedergabe/Pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('ps,de','de,ps')" class="btn btn-lg lang-primary" title="Zwischen Pashto und Deutsch wechseln">de</button>
@@ -303,6 +309,7 @@
 		<h5><span class="colophon-heading">Geschrieben von:</span> Basilio Gimo, David Ker</h5>
 		<h5><span class="colophon-heading">Illustriert von:</span> Carol Liddiment</h5>
 		<h5><span class="colophon-heading">Übersetzt von:</span> Darakhte Danesh</h5>
+		<h5><span class="colophon-heading">Gelesen von:</span> Abdul Rafi Mohammadi</h5>
 		<h5><span class="colophon-heading">Sprache:</span> <a href="/storybooks-german/stories/ps">Pashto</a></h5>
 		<h5><span class="colophon-heading">Niveau:</span> <a href="/storybooks-german/stories/ps/level2">Niveau 2</a></h5>
 		<h5><span class="colophon-heading">Quelle:</span> <a href="https://africanstorybook.org/reader.php?id=6160" target="_blank">Why hippos have no hair</a> aus <a href="https://africanstorybook.org/">African Storybook</a></h5>
@@ -313,15 +320,15 @@
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12">
 		<h5>Weitere <a href="/storybooks-german/stories/ps/level2">Niveau 2</a> Geschichten lesen:</h5>
 			<label class="chip"><a href="/storybooks-german/stories/ps/0337/">د موم ماشومان</a></label>
-			<label class="chip"><a href="/storybooks-german/stories/ps/0095/">زرمينه ښه نجلۍ ده!</a></label>
+			<label class="chip"><a href="/storybooks-german/stories/ps/0095/">زما ښه نجلۍ ده!</a></label>
 			<label class="chip"><a href="/storybooks-german/stories/ps/0089/">خالۍ له بوټو سره خبرې کوي.</a></label>
 			<label class="chip"><a href="/storybooks-german/stories/ps/0027/">پرېکړه</a></label>
-			<label class="chip"><a href="/storybooks-german/stories/ps/0296/">ټام د کېلو پلورونکی</a></label>
-			<label class="chip"><a href="/storybooks-german/stories/ps/0210/">تینګي او غواګانې</a></label>
+			<label class="chip"><a href="/storybooks-german/stories/ps/0296/">د کېلو پلورونکی ټام</a></label>
+			<label class="chip"><a href="/storybooks-german/stories/ps/0210/">تینګی او غواګانې</a></label>
 			<label class="chip"><a href="/storybooks-german/stories/ps/0342/">سزا ورکول</a></label>
 			<label class="chip"><a href="/storybooks-german/stories/ps/0004/">وزه، سپی او غوا</a></label>
-			<label class="chip"><a href="/storybooks-german/stories/ps/0234/">لیلا، د فوټبال ستوری</a></label>
-			<label class="chip"><a href="/storybooks-german/stories/ps/0001/">یو ډیر لوړ سړی</a></label>
+			<label class="chip"><a href="/storybooks-german/stories/ps/0234/">اندیسوا د فوټبال اتله</a></label>
+			<label class="chip"><a href="/storybooks-german/stories/ps/0001/">یوډېر لوړ سړی</a></label>
 	</div>
 </div>
 <div>
